@@ -17,35 +17,40 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<jackson.version>2.9.10.3</jackson.version>
+		<anteroscore.version>1.1.9</anteroscore.version>
+		<anterosdbcp.version>1.0.1</anterosdbcp.version>
+		<healthchecks.version>3.0.2</healthchecks.version>
+		<ldapsdk.version>5.1.1</ldapsdk.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.9.10.3</version>
+			<version>${jackson.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>br.com.anteros</groupId>
 			<artifactId>Anteros-Core</artifactId>
-			<version>1.1.9</version>
+			<version>${anteroscore.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>br.com.anteros</groupId>
 			<artifactId>Anteros-DBCP</artifactId>
-			<version>1.0.1</version>
+			<version>${anterosdbcp.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.codahale.metrics</groupId>
 			<artifactId>metrics-healthchecks</artifactId>
-			<version>3.0.2</version>
+			<version>${healthchecks.version}</version>
 		</dependency>
 
 		<dependency>
             <groupId>com.unboundid</groupId>
             <artifactId>unboundid-ldapsdk</artifactId>
-            <version>5.1.1</version>
+            <version>${ldapsdk.version}</version>
         </dependency>
 	</dependencies>
 
