@@ -2,6 +2,8 @@
 
 This project demonstrates how to fix vulnerable transitive dependencies in a Java Maven project, specifically focusing on log4j vulnerabilities.
 
+Your task is to update log4j-core to get rid of the vulnerabilities in this packages bill of materials. First review the vulnerabilities, then update the package.
+
 ## Quick Start
 
 1. Fork and clone the repository:
@@ -74,18 +76,6 @@ If Option 1 doesn't resolve the issue, add this to your `pom.xml`:
     </dependencies>
 ```
 
-Then add the direct dependency:
-
-```xml
-<dependencies>
-    <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-core</artifactId>
-        <version>2.17.2</version>
-    </dependency>
-</dependencies>
-```
-
 ## Verify the Fix
 
 1. Rebuild the project:
@@ -103,7 +93,7 @@ mvn dependency:tree
 1. Run vulnerability scan:
 
 ```bash
-./osv-scanner scan -f pom.xml
+./osv-scanner scan -L pom.xml 
 ```
 
 Ensure that log4j now appears with the safe version you specified.
