@@ -1,25 +1,21 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/java
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
 {
-	"name": "Java",
+	"name": "Debian",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-17-bookworm",
-
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
-			"installMaven": "true",
-			"installGradle": "false"
-		}
+		"ghcr.io/devcontainers/features/java:1": {},
+		"ghcr.io/devcontainers-extra/features/maven-sdkman:2": {}
 	},
 	"postStartCommand": "curl https://api.endorlabs.com/download/endorlabs/v1.7.203/binaries/endorctl_v1.7.203_linux_amd64 -o endorctl && chmod +x ./endorctl"
 
 
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
