@@ -82,16 +82,15 @@ mvn dependency:tree
 
 ### Option 2: Override Transitive Dependency
 
-If Option 1 doesn't resolve the issue, add this to your `pom.xml`:
+If Option 1 doesn't resolve the issue, add this to your `pom.xml` inside of the `<dependencies>` section:
 
 ```xml
-    <dependencies>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.17.2</version>
         </dependency>
-    </dependencies>
 ```
 
 ## Verify the Fix
