@@ -8,7 +8,7 @@
 		"ghcr.io/devcontainers/features/java:1": {},
 		"ghcr.io/devcontainers-extra/features/maven-sdkman:2": {}
 	},
-	"postStartCommand": "curl https://api.endorlabs.com/download/endorlabs/v1.7.203/binaries/endorctl_v1.7.203_linux_amd64 -o endorctl && chmod +x ./endorctl"
+	"postStartCommand": "curl https://api.endorlabs.com/download/endorlabs/v1.7.203/binaries/endorctl_v1.7.203_linux_amd64 -o endorctl && chmod +x ./endorctl && sudo touch /etc/machine-id"
 
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
